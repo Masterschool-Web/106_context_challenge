@@ -15,6 +15,7 @@ function App() {
                 any component.
             </h2>
             <div className="container">
+            <UserProvider>
                 <UserForm />
 
                 <h2 className="is-size-4">Display User Info Here 👇</h2>
@@ -24,6 +25,7 @@ function App() {
                 </p>
                 <Name />
                 <Location />
+            </UserProvider>
             </div>
         </div>
     );
@@ -31,8 +33,6 @@ function App() {
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(
-    <UserProvider>
-        <App />
-    </UserProvider>,
+        <App />,
     rootElement
 );
